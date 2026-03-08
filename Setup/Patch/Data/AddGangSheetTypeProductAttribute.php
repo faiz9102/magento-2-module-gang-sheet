@@ -3,10 +3,12 @@
 namespace MFA\GangSheet\Setup\Patch\Data;
 
 use Magento\Catalog\Model\Product;
+use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
+use MFA\GangSheet\Model\Source\GangSheetType;
 
 class AddGangSheetTypeProductAttribute implements DataPatchInterface
 {
@@ -54,9 +56,9 @@ class AddGangSheetTypeProductAttribute implements DataPatchInterface
                 'is_html_allowed_on_front' => true,
                 'visible_on_front' => true,
                 'visible' => true,
-                'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+                'global' => ScopedAttributeInterface::SCOPE_GLOBAL,
                 'label' => 'Gang Sheet Type',
-                'source' => \MFA\GangSheetBuilder\Model\Source\GangSheetType::class,
+                'source' => GangSheetType::class,
                 'type' => 'int',
                 'default' => 0,
                 'is_used_in_grid' => true,
