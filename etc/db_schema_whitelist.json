@@ -1,0 +1,24 @@
+{
+    "mfa_gangsheet_designs": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "preview_file": true,
+            "render_file": true,
+            "state_file": true,
+            "product_id": true,
+            "customer_id": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "MFA_GANGSHEET_DESIGNS_PRODUCT_ID": true,
+            "MFA_GANGSHEET_DESIGNS_CUSTOMER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "MFA_GANGSHEET_DESIGNS_PRD_ID_CAT_PRD_ENTT_ENTT_ID": true,
+            "MFA_GANGSHEET_DESIGNS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true
+        }
+    }
+}
